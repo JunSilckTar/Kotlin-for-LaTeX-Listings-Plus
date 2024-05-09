@@ -23,7 +23,7 @@
 
 删除 **\input{TexConfig/package}**
 
-添加**\usepackage[dvipsnames]{xcolor}**  **\usepackage{listings}** 和 **\usepackage{fontspec}**
+添加 **\usepackage[dvipsnames]{xcolor}**  **\usepackage{listings}** 和 **\usepackage{fontspec}**
 
 ```latex
 % 在Kotlin.tex里删除这一句
