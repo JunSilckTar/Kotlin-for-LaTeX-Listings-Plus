@@ -1,4 +1,6 @@
 # Kotlin for LaTeX Listings Plus
+ [简体中文](https://gitee.com/junsilcktar/kotlin-for-la-te-x-listings-plus)  
+
  [Kotlin](https://kotlinlang.org/)  language template for Latex.
 
 it base on [**Kotlin for LaTeX Listings**](https://github.com/cansik/kotlin-latex-listing?tab=readme-ov-file)  
@@ -60,10 +62,6 @@ println("hello kotlin from latex")
 
 Then listing should look like this:
 ![截屏2024-05-09 17.46.36](https://github.com/JunSilckTar/Kotlin-for-LaTeX-Listings-Plus/blob/main/png/print.png)
-
-
-
-
 
 
 
