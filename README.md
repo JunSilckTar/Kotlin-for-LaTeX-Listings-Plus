@@ -41,7 +41,7 @@ Import file **Kotlin.tex**  just like this
 
 ```latex
 \documentclass[a4paper, 11pt]{report}
-\input{TexConfig/Kotlin} %  care the location where Kotlin.tex is
+\input{TexConfig/Kotlin} %  check the location where Kotlin.tex is
 \title{My First Document}
 ```
 
