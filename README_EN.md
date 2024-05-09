@@ -5,7 +5,7 @@ it base on [**Kotlin for LaTeX Listings**](https://github.com/cansik/kotlin-late
 
 Theme referred to Xcode
 
-![Example](png/截屏2024-05-09 17.09.40.png)
+[![image](png/截屏2024-05-09 17.09.40.png)](https://github.com/JunSilckTar/Kotlin-for-LaTeX-Listings-Plus/blob/main/png/%E6%88%AA%E5%B1%8F2024-05-09%2017.09.40.png)
 
 ## How to use it?
 
