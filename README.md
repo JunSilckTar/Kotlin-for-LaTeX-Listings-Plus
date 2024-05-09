@@ -39,7 +39,7 @@ Add **\usepackage[dvipsnames]{xcolor}**  **\usepackage{listings}** and **\usepac
 
 ##### Second. 
 
-Import file **Kotlin.tex**  just like this
+Import file **Kotlin.tex**, suggest you import on main.tex,  just like this
 
 ```latex
 \documentclass[a4paper, 11pt]{report}
