@@ -1,0 +1,53 @@
+
+\input{texConfig/Kotlin}
+
+% 设置中文字体
+\setCJKmainfont{SimSong} % 使用宋体作为主字体
+\setCJKsansfont{SimHei} % 使用黑体作为无衬线字体
+\setCJKmonofont{STFangsong} % 使用仿宋作为等宽字体
+% 设置英文字体
+\setmainfont{Times New Roman} % 主字体
+\setsansfont{Arial} % 无衬线字体
+\setmonofont{Courier New} % 等宽字体
+\setstretch{1.33} % 1.33倍行间距
+
+% 设置页面
+\pagestyle{plain}
+\geometry{
+    papersize={210mm,297mm},
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=3cm,
+%    headheight, % 页眉页脚
+%    headsep,
+%    footskip
+}
+
+\setcounter{tocdepth}{3} % 值：0-part, 1-chapter, 2-section, 3-subsection, 4-subsubsection, 5-paragraph, 6-subparagraph
+\setcounter{secnumdepth}{3}
+% 自定义目录
+\renewcommand{\cftsecfont}{\normalfont\large\bfseries} % 字体样式
+\renewcommand{\cftsecdotsep}{\cftdotsep} % 标题与页码之间的点间距
+\renewcommand{\cftsecafterpnum}{\vskip 0.8em} % 两个标题之间的垂直间距
+\renewcommand{\cftsubsecfont}{\normalfont\normalsize\bfseries} % 字体样式
+\renewcommand{\cftsubsecdotsep}{\cftdotsep} % 标题与页码之间的点间距
+\renewcommand{\cftsubsecafterpnum}{\vskip 0.8em} % 两个标题之间的垂直间距
+\renewcommand{\cftsubsubsecfont}{\normalfont\normalsize\bfseries} % 字体样式
+\renewcommand{\cftsubsubsecdotsep}{\cftdotsep} % 标题与页码之间的点间距
+\renewcommand{\cftsubsubsecafterpnum}{\vskip 0.8em} % 两个标题之间的垂直间距
+\renewcommand{\cftsecnumwidth}{2.4em} % 目录中序号和标题的间距
+\renewcommand{\cftsubsecnumwidth}{2.4em}
+\renewcommand{\cftsubsubsecnumwidth}{3.2em}
+
+
+% 自定义标题样式
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.8em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.8em}{}
+% 自定义标题序号
+\renewcommand\thesection{\arabic{section}}
+% \renewcommand\thesubsection{\arabic{subsection}}
+% \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+

@@ -1,0 +1,35 @@
+
+\documentclass[12pt]{report}
+\input{texConfig/config}
+
+\title{Title On hear}
+\author{xxxx}
+\date{\today}
+
+\begin{document}
+\maketitle
+% TODO
+\input{sections/abstract} % 摘要
+% TODO
+\tableofcontents %目录
+\newpage
+% TODO
+\input{sections/introduction} % 绪论
+
+\begin{lstlisting}[caption={print something}, label={lst:kt}, language=Kotlin]
+// this is a simple code of kotlin:
+println("hello kotlin from latex")
+\end{lstlisting}
+
+\lstinputlisting[label={lst:kt2}, language=Kotlin]{code/main.kt}
+
+% TODO
+\input{sections/conclusion} % 总结与展望
+% 参考文献
+\printbibliography
+\newpage
+% TODO
+\input{sections/acknowledgement} % 致谢
+% TODO
+\input{sections/appendix} % 附录
+\end{document}

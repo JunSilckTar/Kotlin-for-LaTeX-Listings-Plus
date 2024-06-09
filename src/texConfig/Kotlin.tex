@@ -1,0 +1,148 @@
+
+\input{texConfig/package}
+
+\definecolor{SlateGray}{HTML}{5D6C79} % 颜色 注释
+\definecolor{Violetish}{HTML}{9B2393} % 颜色 关键字
+\definecolor{OrchidPurple}{HTML}{6c36a9} % 颜色 自带方法名
+\definecolor{MidnightBlue}{HTML}{15567F} % 颜色 数据类型
+\definecolor{CrimsonRed}{HTML}{C41A16} % 颜色 字符串
+\definecolor{DarkOrchid}{HTML}{4915A8} % 颜色 Jvm注解
+\definecolor{background}{HTML}{F8F8FA} % 颜色 背景
+\definecolor{oneBlue}{HTML}{0f68a0} % 颜色1
+\definecolor{twoPurple}{HTML}{7644af} % 颜色2
+\definecolor{threeBlue}{HTML}{0b4f79} % 颜色3
+\definecolor{fourBlue}{HTML}{387178} % 颜色4
+\definecolor{fivePurple}{HTML}{6c36a9} % 颜色5
+\definecolor{sixPurple}{HTML}{3900a0} % 颜色6
+\definecolor{sevenGreen}{HTML}{326d74} % 颜色7
+\definecolor{eightPurple}{HTML}{660e7a} % 颜色8
+
+\lstdefinestyle{kotlinStyle}{
+    basicstyle=\normalfont\ttfamily\small, % 使用默认的等宽小字体
+    % 使用JetBrains Mono字体，会覆盖上一条 normalsize的字体大小  linespread行间距 selectfont应用字体设置
+    basicstyle=\fontspec{JetBrains Mono}\fontsize{10pt}{14}\selectfont,
+    literate={*}{*}1, % 解决 * 基线下沉问题
+    comment=[l][\color{SlateGray}]{//}, % 颜色 //
+    morecomment=[s][\color{SlateGray}]{/*}{/}, % 文档注释 颜色
+    morestring=[d][\color{CrimsonRed}]', % 颜色 '
+    morestring=[b][\color{CrimsonRed}]", % 颜色 "
+    % morestring=[s][\color{Violetish}]{`}{`}, %  颜色 `
+    morestring=[b][\color{Violetish}]\$, % ${ } 颜色 不生效
+    % backgroundcolor = \color{background}, % 背景颜色
+    identifierstyle=\color{black}, % 默认以黑色显示
+    keywordstyle=\color{Violetish}\bfseries, % 关键词
+    emphstyle=[1]\color{OrchidPurple}, % Kotlin方法
+    emphstyle=[2]\color{DarkOrchid}, % Java注解
+    emphstyle=[3]\color{MidnightBlue}, % 数据类型
+    emphstyle=[4]\color{CrimsonRed}, % 符号
+    emphstyle=[5]\color{DarkOrchid}, % 注解
+    emphstyle=[11]\color{oneBlue}, % 颜色1
+    emphstyle=[12]\color{twoPurple}, % 颜色2
+    emphstyle=[13]\color{threeBlue}, % 颜色3
+    emphstyle=[14]\color{fourBlue}, % 颜色4
+    emphstyle=[15]\color{fivePurple}, % 颜色5
+    emphstyle=[16]\color{sixPurple}, % 颜色6
+    emphstyle=[17]\color{sevenGreen}, % 颜色7
+    emphstyle=[18]\color{eightPurple}, % 颜色8
+    numbers=left, % 设置行号位置 一般是left或right
+    numbersep=1em, % 设置行号的具体位置
+    numberstyle=\color{SlateGray}\small, % 行号的颜色及文字大小
+    sensitive=true, % 大小写敏感
+    breaklines=true, % 自动换行
+    xleftmargin=3em, % 设置左缩进为2em
+    xrightmargin=3em, % 设置左缩进为2em
+    frame=single, % 边框
+    framesep=2em, % 设置边框与代码的距离 设置framesep移动是边框而非代码
+    frameround=tttt, % 边框设置圆角
+    frame=shadowbox, %设置阴影
+    framexleftmargin=1em, %框架左边界延长
+    framexrightmargin=1em, %框架右边界延长
+    rulecolor=\color{MidnightBlue}, % 边框颜色
+    columns=flexible, %只在已经有空格的地方显示空格 对于自定义字体可能无效
+    showspaces=false, % 显示空格
+    showstringspaces=false,  % 不在字符串中显示 ␣
+    captionpos=b, % 设置标题的位置 t（顶部）、b（底部）
+}
+
+\lstdefinelanguage{Kotlin}{
+    % 引用Style
+    style=kotlinStyle,
+    % 关键字
+    keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch,
+    class, companion, const, constructor, continue, crossinline, data, delegate,
+    do, dynamic, else, enum, expect, external,  field, file, final, finally,
+    for, fun, get, if, import, in, infix, init, inline, inner, interface, internal,
+    is, lateinit, noinline, null, object, open, operator, out, override, package, plus,
+    param, private, property, protected, public, receiveris, reified, return, return@,
+    sealed, set, setparam, super, suspend, tailrec, this, throw,  try, typealias,compareTo,
+    typeof, val, var, vararg, when, where, while,length,chars,hashCode,codePoints,false,true},
+    % Kotlin方法
+    emph=[1]{filter, forEach, lazy, map, mapNotNull, println,
+    trimIndent,fileVisitor,also,arrayOf,arrayListOf,assert,apply,arrayOfNulls,abs,
+    acos,acosh,asin,atan,atan2,asinh,atanh,byteArrayOf,booleanArrayOf,buildMap,
+    buildSet,buildList,buildString,check,compareBy,charArrayOf,checkNotNull,do,minOf,
+    booleanArrayOf,charset,compareByDescending,compareValues,compareValuesBy,min,
+    cbrt,cosh,contract,createTempFile,createTempDirectory,cos,ceil,emptyArray,emptyMap,
+    emptySet,emptyList,emptySequence,enumValues,enumValueOf,enumEntries,equals,error,
+    exp,expm1,exitProcess,fileVisitor,fixedRateTimer,floor,floatArrayOf,mapOf,max,
+    flatMapIndexed,generateSequence,hashCode,hashMapOf,hashSetOf,hypot,intArrayOf,
+    iterator,lazyOf,let,listOf,linkedMapOf,linkedSetOf,listOfNotNull,ln,ln1p,
+    mutableMapOf,mutableSetOf,mutableListOf,naturalOrder,nullsFirst,nullsLast,log,
+    log2,log10,partition,print,readln,require,reverseOrder,repeat,requireNotNull,
+    readLine,readlnOrNull,round,run,setOfsequenceOf,sequence,setOfNotNull,shortArrayOf,
+    sin,sign,sinh,sortedMapOf,sortedSetOf,sqrt,suspend,suspendCoroutine,with,timer,
+    suspendCoroutineUninterceptedOrReturn,synchronized,tan,tanh,takeIf,ushortArrayOf,
+    takeUnless,thread,timerTask,toString,truncate,ubyteArrayOf,uintArrayOf,
+    ulongArrayOf,get,equals,subSequence,byteInputStream,asIterable,associateWith,
+    asSequence,associate,associateBy,associateByTo,associateTo,associateWithTo,
+    byteInputStream,codePointAt,codePointCount,compareTo,contentEquals,codePoints,
+    drop,dropLast,dropLastWhile,dropWhile,encodeToByteArray,endsWith,format,hexToInt,
+    hexToByte,hexToLong,hexToShort,hexToByteArray,hexToUByte,hexToUByteArray,hexToUInt,
+    hexToULong,hexToUShort,intern,lowercase,matches,maxOrNull,mapIndexed,mapIndexedNotNull,
+    mapIndexedNotNullTo,mapTo,maxOfWith,mapNotNullTo,filter,filterIndexed,filterNot,none,
+    orEmpty,onEach,onEachIndexed,offsetByCodePoints,partition,prependIndent,padEnd,padStart,
+    reversed,reader,random,regionMatches,removePrefix,removeRange,removeSurrounding,removeSuffix,
+    replace,replaceAfter,reduce,reduceRight,reduceIndexed,reduceIndexedOrNull,reduceOrNull,
+    reduceRightIndexedOrNull,reduceRightOrNull,replaceAfterLast,replaceBeforeLast,replaceRange,
+    replaceFirstChar,replaceIndentByMargin,slice,singleOrNull,scanIndexed,splitToSequence,
+    substringBeforeLast,substringAfter,substringAfterLast,take,takeLast,takeUnless,takeIf,
+    takeWhile,takeLastWhile,toFloat,toRegex,toBigDecimal,toBigDecimalOrNull,toBigInteger,
+    toBigIntegerOrNull,toBooleanStrict,toBooleanStrictOrNull,toByte,toByteOrNull,toByteArray,
+    toCharArray,toDouble,toDoubleOrNull,uppercase,withIndex,zip,zipWithNext,toFloat,
+    toFloatOrNull,isEmpty,isNullOrBlank,isBlank,isNotBlank,isNotEmpty,isNullOrEmpty,toHashSet,
+    toInt,toLong,toLongOrNull,toMutableList,toPattern,toList},
+    % Java注解
+    emph=[2]{@Deprecated, @JvmField, @JvmName, @JvmOverloads,@JvmStatic, @JvmSynthetic},
+    % 数据类型
+    emph=[3]{Array, Byte, Double, Float, Int, Integer, Iterable,Char,List,Map,Set,
+    Long, Runnable, Short, String, Any, Unit, Nothing,javaClass},
+    % 符号
+    emph=[4]{==, != , > , < ,<=, >=, |, ||, \&, \&\&, !},
+    % 注解
+    emph=[5]{@DataSource,@Cacheable,@Service,@Autowired},
+    % 颜色1
+    emph=[11]{main,
+    },
+    % 颜色2
+    emph=[12]{
+    },
+    % 颜色3
+    emph=[13]{
+    },
+    % 颜色4
+    emph=[14]{
+    },
+    % 颜色5
+    emph=[15]{
+    },
+    % 颜色6
+    emph=[16]{
+    },
+    % 颜色7
+    emph=[17]{
+    },
+    % 颜色8
+    emph=[18]{},
+}
+
+
